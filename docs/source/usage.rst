@@ -19,7 +19,7 @@ section.
 Installation
 ------------
 
-.. note::
+.. tip::
 
    Even if it is not required, we recommend installing Oncodrive3D in a virtual 
    environment (e.g., using `conda <https://conda.io/projects/conda/en/latest/user-guide/index.html>`_ 
