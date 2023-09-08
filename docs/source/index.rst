@@ -1,13 +1,15 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to Oncodrive3D's documentation!
+=======================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Oncodrive3D** is a method designed to analyze patterns of somatic 
+mutations across tumors to identify three-dimensional (3D) clusters 
+of missense mutations and detect genes that are under positive selection, 
+and, therefore, are capable of driving tumorigenesis.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+For practical information on how to setup and run Oncodrive3D, check out the 
+:doc:`usage` section, which includes information for the :ref:`installation` 
+process, :ref:`building datasets` necessary for the tool to run, and 
+:ref:`running 3D-clustering analysis`.
 
 .. note::
 
@@ -18,5 +20,7 @@ Contents
 
 .. toctree::
 
+   install
    usage
-   api
+
+Lumache has its documentation hosted on Read the Docs.
