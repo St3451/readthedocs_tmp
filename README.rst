@@ -9,10 +9,6 @@ Read the tutorial here:
 https://docs.readthedocs.io/en/stable/tutorial/
 
 
-The above command build the datasets for the human proteome with default 
-configuration. However, there are a number of parameters and options that can 
-be added:
-
 -o, --output_dir <path>   Build folder where to save the files. Default: ``datasets``
 
 -s, --organism <str>   Organism name (``human`` or ``mouse``). Default: ``human``
