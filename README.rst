@@ -8,7 +8,6 @@ Read the tutorial here:
 
 https://docs.readthedocs.io/en/stable/tutorial/
 
-
 -o, --output_dir <path>   Build folder where to save the files. Default: ``datasets``
 
 -s, --organism <str>   Organism name (``human`` or ``mouse``). Default: ``human``
