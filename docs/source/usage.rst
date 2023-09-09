@@ -185,7 +185,7 @@ The MAF file must include at least the following four fields:
 
 - ``Hugo_Symbol`` or ``SYMBOL``: HUGO symbol.
 - ``Variant_Classification`` or ``Consequence``: translational effect of variant allele.
-- ``HGVSp_Short`` or both ``Amino_acids`` and ``Protein_position``: variant's protein sequence in HGVS recommended format (1-letter amino acid codes) or two fields defining amino acids substitition and protein position. 
+- ``HGVSp_Short`` or both ``Amino_acids`` and ``Protein_position``: variant's protein sequence in HGVS recommended format (1-letter amino acid codes) or two fields defining amino acids substitition ('REF/ALT' e.g., 'E/V') and protein position. 
 - ``Tumor_Sample_Barcode`` or ``#Uploaded_variation``: aliquot barcode for the tumor sample.
 
 .. important::
