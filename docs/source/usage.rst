@@ -114,7 +114,7 @@ Running 3D-clustering analysis
 
 .. code-block:: bash
 
-   oncodrive3D run -i input.maf -p mut_profile.json -d build_folder/ -t cancer_type -C cohort_name
+   oncodrive3D run -i input.maf -p mut_profile.json -d build_folder/
 
 The above command run Oncodrive3D to perform a 3D-clustering analysis using the 
 mutation profile of the cohort and default configuration. However, there are a 
@@ -189,10 +189,6 @@ The MAF file must include at least the following four fields:
 - ``Variant_Classification`` or ``Consequence``: translational effect of variant allele.
 - ``HGVSp_Short`` or both ``Amino_acids`` and ``Protein_position``: variant's protein sequence in HGVS recommended format (1-letter amino acid codes) or two fields defining amino acids substitition ('REF/ALT' e.g., 'E/V') and protein position. 
 - ``Tumor_Sample_Barcode`` or ``#Uploaded_variation``: aliquot barcode for the tumor sample.
-
-.. important::
-
-   MAKE PARSER
 
 Mutation profile
 ****************
@@ -308,4 +304,25 @@ It includes the following fields:
 :GeneCohort: Cohort name.
 
 
+Testing
+-------
 
+To ensure that Oncodrive3D is correctly installed and configured, you can 
+perform a test run using the provided test input file. 
+
+.. code-block:: bash
+
+   cd path/to/oncodrive3D
+   oncodrive3D run -i test/TCGA_WXS_ACC.in.maf -p test/TCGA_WXS_ACC.mutrate.json -o test/results/
+
+.. note::
+
+   By default, Oncodrive3D expects to find the necessary dataset files in the 
+   ``datasets/`` directory. These files should have been created during the 
+   :ref:`building datasets` step. If you used a different directory to build 
+   the datasets, make sure to specify it using the appropriate `-d` option.
+
+.. tip::
+
+   You can inspect the files in the `test/` directory to better understand the 
+   format and structure of the input and output data.
