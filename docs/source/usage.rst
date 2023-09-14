@@ -323,5 +323,5 @@ perform a test run using the provided test input file.
 
 .. tip::
 
-   You can inspect the files in the `test/` directory to better understand the 
+   You can inspect the files in the ``test/`` directory to better understand the 
    format and structure of the input and output data.
