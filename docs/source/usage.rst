@@ -74,7 +74,7 @@ The above command build the datasets for the human proteome with default
 configuration. However, there are a number of parameters and options that can 
 be added:
 
--o, --output_dir <path>   Build folder where to save the files. Default: ``datasets``
+-o, --output_dir <path>   Build folder where to save the files. Default: ``datasets/``
 
 -s, --organism <str>   Organism name (``human`` or ``mouse``). Default: ``human``
 
@@ -124,9 +124,9 @@ number of parameters and options that can be added:
 
 -p, --mut_profile_path <path>   Mut profile of the cohort (dictionary of 192 key-value pairs) in json format. 
 
--o, --output_dir <path>   Output directory. Default: ``results``
+-o, --output_dir <path>   Output directory. Default: ``results/``
 
--d, --data_dir <path>   Build folder including the files compiled during the :ref:`building datasets` step. Default: ``datasets``
+-d, --data_dir <path>   Build folder including the files compiled during the :ref:`building datasets` step. Default: ``datasets/``
 
 -n, --n_iterations <int>   Number of densities to be simulated. Default: ``10000``
 
@@ -308,7 +308,7 @@ Testing
 -------
 
 To ensure that Oncodrive3D is correctly installed and configured, you can 
-perform a test run using the provided test input file. 
+perform a test run using the provided test input files. 
 
 .. code-block:: bash
 
