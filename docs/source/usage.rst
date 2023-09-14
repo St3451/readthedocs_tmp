@@ -312,7 +312,6 @@ perform a test run using the provided test input file.
 
 .. code-block:: bash
 
-   cd path/to/oncodrive3D
    oncodrive3D run -i test/TCGA_WXS_ACC.in.maf -p test/TCGA_WXS_ACC.mutrate.json -o test/results/
 
 .. note::
