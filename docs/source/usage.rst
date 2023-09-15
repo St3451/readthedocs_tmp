@@ -348,7 +348,7 @@ The nextflow script takes the following arguments:
 
 --container <path>   Singularity image with installation of Oncodrive3D. Default: ``build/containers/oncodrive3d.sif``
 
---max_running <int>   Number of maximum cohort allowed to be processed in parallel . Default: ``5``
+--max_running <int>   Maximum number of cohorts allowed to be processed in parallel . Default: ``5``
 
 --cores <int>   CPU cores used to process each cohort. Default: ``9``
 
