@@ -358,6 +358,11 @@ The nextflow script takes the following arguments:
 
 .. note::
 
-   To use the nextflow script, the input `maf` and `mut profile` should be in 
-   the same folder as shown in the test examples and they should rispectively 
-   have the extensions ``.in.maf`` and ``.mutrate.json``.
+   When using the nextflow script, it's important to ensure that your input 
+   `maf` and `mut profile` files are located in the same folder as indicated 
+   in the test examples. These files should have the extensions ``.in.maf`` 
+   and ``.mutrate.json``, respectively.
+
+   The script will automatically run Oncodrive3D on all eligible input files 
+   found in the directory unless the `--cohort_pattern` flag is used to specify 
+   a pattern for selecting specific files.
