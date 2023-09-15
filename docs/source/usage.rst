@@ -325,3 +325,39 @@ perform a test run using the provided test input files.
 
    You can inspect the files in the ``test/`` directory to better understand the 
    format and structure of the input and output data.
+
+
+Run on mulitple cohorts
+-----------------------
+
+Oncodrive3D can be run in parallel on multiple cohorts using `(nextflow) <https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#introduction>`_:
+
+.. code-block:: bash
+
+   nextflow run oncodrive3d.nf --indir test/ --outdir test/results/
+
+The nextflow script takes the following arguments:
+
+--indir <path>   Input directory including the subdirectories ``maf`` and ``mut_profile``. Default: ``test/``
+
+--outdir <path>   Output directory. Default: ``test/results/``
+
+--cohort_pattern <str>   Pattern expression to select specific files within the input directory (e.g., `TCGA*` would select only TCGA cohorts). Default: ``*``
+
+--data_dir <path>   Build folder including the files compiled during the :ref:`building datasets` step. Default: ``datasets/``
+
+--container <path>   Singularity image with installation of Oncodrive3D. Default: ``build/containers/oncodrive3d.sif``
+
+--max_running <int>   Number of maximum cohort allowed to be processed in parallel . Default: ``5``
+
+--cores <int>   CPU cores used to process each cohort. Default: ``9``
+
+--memory <str>   Memory used to process each cohort. Default: ``50GB``
+
+--seed <int>   Seed to be used for reproducibility. Default: ``128``
+
+.. note::
+
+   To use the nextflow script, the input `maf` and `mut profile` should be in 
+   the same folder as shown in the test examples and they should rispectively 
+   have the extensions ``.in.maf`` and ``.mutrate.json``.
