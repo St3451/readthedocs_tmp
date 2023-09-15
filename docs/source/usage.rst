@@ -356,6 +356,17 @@ The nextflow script takes the following arguments:
 
 --seed <int>   Seed to be used for reproducibility. Default: ``128``
 
+.. tip::
+
+   The script will automatically run Oncodrive3D on all eligible input files 
+   found in the directory unless the `--cohort_pattern` flag is used to specify 
+   a pattern for selecting specific files.
+
+.. warning::
+   
+   To ensure efficient processing, it's highly recommended to use the nextflow 
+   script in a cluster environment. This will take full advantage of parallel 
+   processing capabilities and expedite the analysis.
 
 .. warning::
 
@@ -363,8 +374,3 @@ The nextflow script takes the following arguments:
    `maf` and `mut profile` files are located in the same folder as indicated 
    in the test examples. These files should have the extensions ``.in.maf`` 
    and ``.mutrate.json``, respectively.
-
-.. tip::
-   The script will automatically run Oncodrive3D on all eligible input files 
-   found in the directory unless the `--cohort_pattern` flag is used to specify 
-   a pattern for selecting specific files.
