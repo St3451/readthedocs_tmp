@@ -327,10 +327,10 @@ perform a test run using the provided test input files.
    format and structure of the input and output data.
 
 
-Run on mulitple cohorts
------------------------
+Prallel processing on mulitple cohorts
+--------------------------------------
 
-Oncodrive3D can be run in parallel on multiple cohorts using `(nextflow) <https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#introduction>`_:
+Oncodrive3D can be run in parallel on multiple cohorts using `nextflow <https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#introduction>`_:
 
 .. code-block:: bash
 
@@ -356,13 +356,15 @@ The nextflow script takes the following arguments:
 
 --seed <int>   Seed to be used for reproducibility. Default: ``128``
 
-.. note::
+
+.. warning::
 
    When using the nextflow script, it's important to ensure that your input 
    `maf` and `mut profile` files are located in the same folder as indicated 
    in the test examples. These files should have the extensions ``.in.maf`` 
    and ``.mutrate.json``, respectively.
 
+.. tip::
    The script will automatically run Oncodrive3D on all eligible input files 
    found in the directory unless the `--cohort_pattern` flag is used to specify 
    a pattern for selecting specific files.
