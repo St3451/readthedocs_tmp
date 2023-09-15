@@ -327,7 +327,7 @@ perform a test run using the provided test input files.
    format and structure of the input and output data.
 
 
-Prallel processing on mulitple cohorts
+Prallel processing on multiple cohorts
 --------------------------------------
 
 Oncodrive3D can be run in parallel on multiple cohorts using `nextflow <https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#introduction>`_:
