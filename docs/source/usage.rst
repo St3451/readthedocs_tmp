@@ -368,7 +368,7 @@ The nextflow script takes the following arguments:
 
 --seed <int>   Seed to be used for reproducibility. Default: ``128``
 
-.. important::
+.. note::
 
    When using the nextflow script, it is important to ensure that your input 
    `maf` and `mut profile` files are located in the same folder, as shown in 
@@ -381,7 +381,7 @@ The nextflow script takes the following arguments:
    found in the directory unless the `--cohort_pattern` flag is used to specify 
    a pattern for selecting specific files.
 
-.. note::
+.. tip::
    
    To ensure efficient processing, it is highly recommended to use the nextflow 
    script in a cluster environment. This will take full advantage of parallel 
