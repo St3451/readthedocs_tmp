@@ -330,7 +330,7 @@ Parallel processing on multiple cohorts
 ---------------------------------------
 
 It is possible to run Oncodrive3D in parallel on multiple cohorts by using 
-`nextflow <https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#introduction>`_.
+`nextflow <https://www.nextflow.io/>`_.
 
 1. Install nextflow and Singularity (versions `23.04.3.5875` and `3.5.3` were used respectively).
 
