@@ -21,10 +21,11 @@ Installation
 
 .. tip::
 
-   Even if it is not required, we recommend installing Oncodrive3D in a virtual 
+   We recommend installing Oncodrive3D in a virtual 
    environment (e.g., using `conda <https://conda.io/projects/conda/en/latest/user-guide/index.html>`_ 
    or `mamba <https://mamba.readthedocs.io/en/latest/>`_) to isolate its 
-   dependencies from your system-wide Python installation.
+   dependencies from your system-wide Python installation. However, this is not 
+   a requirement.
 
    .. code-block:: bash
 
@@ -43,8 +44,8 @@ Install using pip from PyPI
 
    Installation from PyPI not yet enabled.
 
-Install using pip from repository
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Install from source
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -133,8 +134,6 @@ number of parameters and options that can be added:
 -a, --alpha <float>   Significant threshold for the p-value of res and gene. Default: ``0.01``
 
 -P, --cmap_prob_thr <float>   Threshold to define contacts between residues based on distance on predicted structure and PAE. Default: ``0.5``
-
--H, --hits_only <flag: set to enable>   Returns only positions in clusters.
 
 -f, --no_fragments <flag: set to enable>   Disable processing of fragmented (AF-F) proteins.
 
@@ -323,14 +322,25 @@ perform a test run using the provided test input files.
 
 .. tip::
 
-   You can inspect the files in the ``test/`` directory to better understand the 
-   format and structure of the input and output data.
+   You can inspect the files in the ``test/`` directory to better understand 
+   the format and structure of the input and output data.
 
 
-Prallel processing on multiple cohorts
---------------------------------------
+Parallel processing on multiple cohorts
+---------------------------------------
 
-Oncodrive3D can be run in parallel on multiple cohorts using `nextflow <https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#introduction>`_:
+It is possible to run Oncodrive3D in parallel on multiple cohorts by using 
+`nextflow <https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#introduction>`_.
+
+1. Install nextflow and Singularity (versions `23.04.3.5875` and `3.5.3` were used respectively).
+
+2. Pull Singularity image for Oncodrive3D.
+
+.. important::
+
+   Not yet published (for now the image is provided in the repo).
+
+3. Run Oncodrive3D in parallel by using the provided nextflow script:
 
 .. code-block:: bash
 
@@ -342,7 +352,7 @@ The nextflow script takes the following arguments:
 
 --outdir <path>   Output directory. Default: ``test/results/``
 
---cohort_pattern <str>   Pattern expression to select specific files within the input directory (e.g., `TCGA*` would select only TCGA cohorts). Default: ``*``
+--cohort_pattern <str>   Pattern expression to select specific files within the input directory (e.g., 'TCGA*' would select only TCGA cohorts). Default: ``*``
 
 --data_dir <path>   Build folder including the files compiled during the :ref:`building datasets` step. Default: ``datasets/``
 
@@ -356,21 +366,21 @@ The nextflow script takes the following arguments:
 
 --seed <int>   Seed to be used for reproducibility. Default: ``128``
 
+.. important::
+
+   When using the nextflow script, it is important to ensure that your input 
+   `maf` and `mut profile` files are located in the same folder, as shown in 
+   ``test/``. These files should have the extensions ``.in.maf`` 
+   and ``.mutrate.json``, respectively.
+
 .. tip::
 
    The script will automatically run Oncodrive3D on all eligible input files 
    found in the directory unless the `--cohort_pattern` flag is used to specify 
    a pattern for selecting specific files.
 
-.. warning::
+.. note::
    
-   To ensure efficient processing, it's highly recommended to use the nextflow 
+   To ensure efficient processing, it is highly recommended to use the nextflow 
    script in a cluster environment. This will take full advantage of parallel 
    processing capabilities and expedite the analysis.
-
-.. warning::
-
-   When using the nextflow script, it's important to ensure that your input 
-   `maf` and `mut profile` files are located in the same folder as indicated 
-   in the test examples. These files should have the extensions ``.in.maf`` 
-   and ``.mutrate.json``, respectively.
