@@ -332,9 +332,13 @@ Parallel processing on multiple cohorts
 It is possible to run Oncodrive3D in parallel on multiple cohorts by using 
 `nextflow <https://www.nextflow.io/>`_.
 
-1. Install nextflow and Singularity (versions `23.04.3.5875` and `3.5.3` were used respectively).
+1. Install `nextflow <https://www.nextflow.io/docs/latest/getstarted.html>`_ and `Singularity <https://www.nextflow.io/docs/latest/getstarted.html>`_ (versions `23.04.3.5875` and `3.5.3` were used respectively).
 
 2. Pull Singularity image for Oncodrive3D.
+
+.. code-block:: bash
+
+   singularity pull library://oncodrive3d
 
 .. important::
 
@@ -348,15 +352,15 @@ It is possible to run Oncodrive3D in parallel on multiple cohorts by using
 
 The nextflow script takes the following arguments:
 
---indir <path>   Input directory including the subdirectories ``maf`` and ``mut_profile``. Default: ``test/``
+--indir <path>   Input directory including the subdirectories ``maf`` and ``mut_profile``. Default: ``${baseDir}/test/``
 
---outdir <path>   Output directory. Default: ``test/results/``
+--outdir <path>   Output directory. Default: ``run_<timestamp>``
 
 --cohort_pattern <str>   Pattern expression to select specific files within the input directory (e.g., 'TCGA*' would select only TCGA cohorts). Default: ``*``
 
---data_dir <path>   Build folder including the files compiled during the :ref:`building datasets` step. Default: ``datasets/``
+--data_dir <path>   Build folder including the files compiled during the :ref:`building datasets` step. Default: ``${baseDir}/datasets/``
 
---container <path>   Singularity image with installation of Oncodrive3D. Default: ``build/containers/oncodrive3d.sif``
+--container <path>   Singularity image with installation of Oncodrive3D. Default: ``${baseDir}/build/containers/oncodrive3d.sif``
 
 --max_running <int>   Maximum number of cohorts allowed to be processed in parallel . Default: ``5``
 
