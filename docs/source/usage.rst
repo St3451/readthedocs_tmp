@@ -342,7 +342,12 @@ It is possible to run Oncodrive3D in parallel on multiple cohorts by using
 
 .. important::
 
-   Not yet published (for now the image is provided in the repo).
+   The singularity image has not been published yet. For now it can't be pulled 
+   and it is provided in the repo.
+
+.. code-block:: bash
+
+   tar -xzvf build/containers/oncodrive3d.sif.tar.gz && rm build/containers/oncodrive3d.sif.tar.gz
 
 3. Run Oncodrive3D in parallel by using the provided nextflow script:
 
