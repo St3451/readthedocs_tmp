@@ -334,6 +334,8 @@ It is possible to run Oncodrive3D in parallel on multiple cohorts by using
 
 1. Install `nextflow <https://www.nextflow.io/docs/latest/getstarted.html>`_ and `Singularity <https://www.nextflow.io/docs/latest/getstarted.html>`_ (versions `23.04.3.5875` and `3.5.3` were used respectively).
 
+..
+
 2. Pull Oncodrive3D image from Singularity Cloud Library:
 
 .. code-block:: bash
