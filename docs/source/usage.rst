@@ -354,7 +354,7 @@ The nextflow script takes the following arguments:
 
 --indir <path>   Input directory including the subdirectories ``maf`` and ``mut_profile``. Default: ``${baseDir}/test/``
 
---outdir <path>   Output directory. Default: ``run_<timestamp>``
+--outdir <path>   Output directory. Default: ``run_<timestamp>/``
 
 --cohort_pattern <str>   Pattern expression to select specific files within the input directory (e.g., 'TCGA*' would select only TCGA cohorts). Default: ``*``
 
