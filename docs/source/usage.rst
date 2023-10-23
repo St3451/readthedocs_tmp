@@ -137,6 +137,8 @@ number of parameters and options that can be added:
 
 -f, --no_fragments <flag: set to enable>   Disable processing of fragmented (AF-F) proteins.
 
+-x, --only_processed <flag: set to enable>   Include only processed genes in the output.
+
 -c, --cores <int>   Number of CPU cores to use in the computation. Default: ``number of CPU cores available``
 
 -s, --seed <int>   Seed to be used for reproducibility.
